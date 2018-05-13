@@ -12,6 +12,21 @@ function mergeStrings(a, b) {
         let lenA = a.length;
         let lenB = b.length;
 
+        // let longerLen = 0;
+        // let longerStr = '';
+        // let shorterStr = '';
+
+        // if (lenA > lenB) {
+        //     longerLen = lenA;
+        //     longerStr = a;
+        //     shorterStr = b;
+        // }
+        // else {
+        //     longerLen = lenB;
+        //     longerStr = b;
+        //     shorterStr = a;
+        // }
+
         let longerLen = lenA > lenB ? lenA : lenB;
 
         let _rtnVal = '';

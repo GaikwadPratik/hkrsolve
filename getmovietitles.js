@@ -8,6 +8,7 @@ function fetchData(substr) {
             .then(function (data) {
                 let _movies = data.data;
                 let _totalPages = data.total_pages;
+                
                 let _sortedArray = [];
                 for (let _index = 0; _index < _movies.length; _index++) {
                     _sortedArray.push(data.data[_index].Title);
@@ -19,9 +20,9 @@ function fetchData(substr) {
 
                         fetch(_nextUrl)
                             .then(function (response) {
-
-                                for (let i = 0; i < response.length; i++) {
-                                    _sortedArray.push(json.data[i].Title);
+                                
+                                for (let i = 0; i < response.data.length; i++) {                                    
+                                    _sortedArray.push(response.data[i].Title);
                                 }
 
                                 if (_index === _totalPages)
